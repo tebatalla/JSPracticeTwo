@@ -1,8 +1,8 @@
 Function.prototype.myBind = function(context) {
   var fn = this;
-  return (function () {
+  return function () {
     fn.apply(context);
-  });
+  };
 };
 
 function hello() {
